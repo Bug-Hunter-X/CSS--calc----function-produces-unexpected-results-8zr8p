@@ -1,0 +1,9 @@
+To avoid unexpected results, always ensure your calculation within `calc()` results in a non-negative value. You might need to add checks or alternative calculations to handle cases where the result would be negative.  Here's an example using `max()` to ensure a non-negative value:
+
+```css
+/*bugSolution.css*/
+div {
+  width: calc(max(0, 100% - 10px)); /* Ensures width is never negative */
+}
+```
+This improved version uses the `max()` function to return the larger value between 0 and the result of the calculation, thereby ensuring that the width never becomes negative.
